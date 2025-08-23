@@ -1,0 +1,29 @@
+{
+  "name": "validate-pull-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && ncc build dist/index.js -o dist",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "@vercel/ncc": "^0.38.3",
+    "eslint": "^9.34.0",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1"
+  }
+}
