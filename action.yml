@@ -1,0 +1,37 @@
+name: "Validate Pull Request"
+description: ""
+author: "Jordan Darlington"
+
+inputs:
+# Title
+  check-title:
+    description: "Require Pull Request Title"
+    required: false
+  title-length:
+    description: "Require Pull Request Title to be a minimum length (requires check-title)"
+    required: false
+  title-pattern:
+    description: "Require Pull Request Title to match regex pattern (requires check-title)"
+    required: false
+
+# Body
+  check-body:
+    description: "Require Pull Request Body"
+    required: false
+  body-length:
+    description: "Require Pull Request Body to be a minimum length (requires check-body)"
+    required: false
+
+#  Branch
+  branch-pattern:
+    description: "Require Branch Name to match regex pattern"
+    required: false
+
+#  Draft Status
+  check-draft:
+    description: "Require Pull Request to not be a draft"
+    required: false
+
+runs:
+  using: "node24"
+  main: "dist/index.js"
